@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printValues() {
+            var array = [10, 20, 30, 40, 50, 60];
+            var result = "";
+            
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 3 === 0) {
+                    result += array[i] + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = "Значения: " + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printValues()">Вывести значения</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

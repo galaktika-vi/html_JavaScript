@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printOddNumbers() {
+            var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var result = "";
+            
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 !== 0) {
+                    result += numbers[i] + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = "Нечетные числа: " + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printOddNumbers()">Вывести числа</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
